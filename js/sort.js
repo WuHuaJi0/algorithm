@@ -14,3 +14,7 @@ function bubble_sort(arr){
     return arr;
 }
 /**冒泡排序结束*/
+
+module.exports = {
+    bubble_sort:bubble_sort
+}
