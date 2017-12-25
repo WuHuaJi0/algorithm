@@ -22,14 +22,17 @@ function bubble_sort($arr){
 
 /**选择排序*/
 function select_sort($arr){
-    for($i = 0;$i< count($arr);$i++){
+    $length = count($arr);
+    for($i = 0;$i< $length;$i++){
         $min = $i;
-        for ($j = $i + 1;$j<count($arr);$j++){
+        for ($j = $i + 1;$j<$length;$j++){
             if ($arr[$j] < $arr[$min]){
                 $min = $j;
             }
         }
-        swap($arr[$min],$arr[$i]);
+        if ($min != $i){
+            swap($arr[$min],$arr[$i]);
+        }
     }
     return $arr;
 }
