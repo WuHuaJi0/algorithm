@@ -13,8 +13,26 @@ function bubble_sort(arr){
     }
     return arr;
 }
-/**冒泡排序结束*/
+
+
+/**选择排序*/
+function select_sort(arr){
+    for(var i = 0;i< arr.length;i++){
+        var min = i;
+        for(var j = i + 1 ;j< arr.length;j++){
+            if(arr[j] < arr[i]){
+                min = j;
+            }
+        }
+        var tmp = arr[i]
+        arr[i] = arr[min]
+        arr[min] = tmp;
+    }
+    return arr;
+}
+
 
 module.exports = {
-    bubble_sort:bubble_sort
+    bubble_sort:bubble_sort,
+    select_sort:select_sort
 }
