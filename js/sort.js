@@ -14,28 +14,29 @@ function bubble_sort(arr){
     return arr;
 }
 
-
 /**选择排序*/
 function select_sort(arr){
     var length = arr.length
     for(var i = 0;i< length;i++){
-        var min = i;
+        var min_index = i;
         for(var j = i + 1 ;j< length;j++){
-            if(arr[j] < arr[i]){
-                min = j;
+            if(arr[j] < arr[min_index]){
+                min_index = j;
             }
         }
-        if (min !== i){
+        if (min_index !== i){
             var tmp = arr[i]
-            arr[i] = arr[min]
-            arr[min] = tmp;
+            arr[i] = arr[min_index]
+            arr[min_index] = tmp;
         }
     }
     return arr;
 }
 
 
+
 module.exports = {
     bubble_sort:bubble_sort,
-    select_sort:select_sort
+    select_sort:select_sort,
+    insert_sort:insert_sort
 }
