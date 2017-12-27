@@ -9,9 +9,9 @@
 require_once 'sort.php';
 
 /**一个简单测试函数，用于测试排序后结果是否相等*/
-function testEqual(&$origin,$sorted,$sortfunc){
-    $origin = call_user_func($sortfunc,$origin);
-    if ($sorted == $origin){
+function testEqual($origin,$sorted,$sortfunc){
+    $sort_result = call_user_func($sortfunc,$origin);
+    if ($sorted == $sort_result){
         echo $sortfunc." 成功\n";
     }else{
         echo $sortfunc." 失败\n";
