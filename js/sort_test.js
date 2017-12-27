@@ -23,3 +23,9 @@ testEqual(origin,sorted,sort.select_sort);
 
 origin = [2,3,5,1,0,6,-9];
 testEqual(origin,sorted,sort.insert_sort);
+
+origin = [2,3,5,1,0,6,-9];
+testEqual(origin,sorted,sort.fast_sort);
+
+origin = [2,3,5,1,0,6,-9];
+testEqual(origin,sorted,sort.merge_sort);
