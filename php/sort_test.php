@@ -23,3 +23,4 @@ $origin = [2,3,5,1,0,6,-9];
 $sorted = [-9,0,1,2,3,5,6];
 testEqual($origin,$sorted,"bubble_sort");
 testEqual($origin,$sorted,"select_sort");
+testEqual($origin,$sorted,"insert_sort");

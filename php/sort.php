@@ -36,3 +36,16 @@ function select_sort($arr){
     }
     return $arr;
 }
+
+/**插入排序*/
+function insert_sort($arr){
+    $length = count($arr);
+    for($i = 1;$i < $length ;$i++){
+        $value = $arr[$i];
+        for ($j = $i-1;$arr[$j] > $value && $j >= 0; $j-- ){
+            $arr[$j+1] = $arr[$j];
+        }
+        $arr[$j+1] = $value;
+    }
+    return $arr;
+}
