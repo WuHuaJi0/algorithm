@@ -33,6 +33,18 @@ function select_sort(arr){
     return arr;
 }
 
+/**插入排序*/
+function insert_sort(arr) {
+    var length = arr.length
+    for(var i = 0;i<length;i++){
+        var value = arr[i];
+        for(var j = i - 1; arr[j] > value ;j--){
+            arr[j + 1] = arr[j]
+        }
+        arr[j + 1 ] = value
+    }
+    return arr;
+}
 
 
 module.exports = {

@@ -20,3 +20,6 @@ testEqual(origin,sorted,sort.bubble_sort);
 
 origin = [2,3,5,1,0,6,-9];
 testEqual(origin,sorted,sort.select_sort);
+
+origin = [2,3,5,1,0,6,-9];
+testEqual(origin,sorted,sort.insert_sort);
