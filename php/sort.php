@@ -49,3 +49,22 @@ function insert_sort($arr){
     }
     return $arr;
 }
+
+
+/**快速排序*/
+function fast_sort($arr){
+    if (count($arr) <= 1){
+        return $arr;
+    }
+    $left = array();
+    $right = array();
+    $middle = $arr[0];
+    for($i = 1;$i<count($arr);$i++){
+        if ($arr[$i] > $middle){
+            $right[] = $arr[$i];
+        }else{
+            $left[] = $arr[$i];
+        }
+    }
+    return array_merge(fast_sort($left),array($middle),fast_sort($right));
+}
